@@ -1104,6 +1104,7 @@
      */
     function checkForCollision(obstacle, tRex, opt_canvasCtx) {
         var obstacleBoxXPos = Runner.defaultDimensions.WIDTH + obstacle.xPos;
+        
 
         // Adjustments are made to the bounding box as there is a 1 pixel white
         // border around the t-rex and obstacles.
@@ -1126,6 +1127,7 @@
 
         // Simple outer bounds check.
         if (boxCompare(tRexBox, obstacleBox)) {
+
             var collisionBoxes = obstacle.collisionBoxes;
             var tRexCollisionBoxes = tRex.ducking ?
                 Trex.collisionBoxes.DUCKING : Trex.collisionBoxes.RUNNING;
@@ -1146,6 +1148,12 @@
                     }
 
                     if (crashed) {
+                        // Code for collision detection
+                        // $('#a').removeClass('animation')
+                        console.log('crash')
+                        imgRandom();
+
+
                         return [adjTrexBox, adjObstacleBox];
                     }
                 }
@@ -2715,3 +2723,18 @@ function onDocumentLoad() {
 }
 
 document.addEventListener('DOMContentLoaded', onDocumentLoad);
+
+
+// IMG Creator
+var imgArray = ['1.jpeg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpeg', '6.jpeg', '7.jpeg', '8.jpeg'];
+var basePath= "assets/crashes/";
+var imgWrapper = $('.random-image-wrapper');
+
+function imgRandom() {
+    // for (var i = 0; i < 1; i++) {
+        var rand = imgArray[Math.floor(Math.random() * imgArray.length)];
+        var image = new Image();
+        image.src = basePath+rand;
+        imgWrapper.append(image);
+    // }
+}

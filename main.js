@@ -5,8 +5,8 @@
 $('#main-frame-error').on('click', function(){
     animateDiv();
     $('#a').addClass('animation')
-    console.log('aaa')
-    setInterval(function () {
+    console.log('Clicked on main frame')
+    var bounceBall = setInterval(function () {
         const result = Math.floor(Math.random() * 7) + 1
         document.getElementById("a").style.backdropFilter = "blur(" + result + "px)";    
     }, 1000);

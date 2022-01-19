@@ -164,6 +164,20 @@ html, body {
   display: none;
 }
 
+.random-image-wrapper{
+  margin: 42px 0;
+}
+
+.random-image-wrapper img{
+  width: 100%;
+}
+
+
+
+
+
+
+
 
 
 
