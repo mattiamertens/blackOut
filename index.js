@@ -120,7 +120,7 @@
         MAX_OBSTACLE_DUPLICATION: 2,
         MAX_SPEED: 13,
         MIN_JUMP_HEIGHT: 35,
-        MOBILE_SPEED_COEFFICIENT: 1.2,
+        MOBILE_SPEED_COEFFICIENT: 1.8,
         RESOURCE_TEMPLATE_ID: 'audio-resources',
         SPEED: 6,
         SPEED_DROP_COEFFICIENT: 3
@@ -338,6 +338,7 @@
             if (this.dimensions.WIDTH < DEFAULT_WIDTH) {
                 var mobileSpeed = speed * this.dimensions.WIDTH / DEFAULT_WIDTH *
                     this.config.MOBILE_SPEED_COEFFICIENT;
+                    // console.log(mobileSpeed)
                 this.currentSpeed = mobileSpeed > speed ? speed : mobileSpeed;
             } else if (opt_speed) {
                 this.currentSpeed = opt_speed;
@@ -595,8 +596,7 @@
                 }
             }
 
-            if (this.playing || (!this.activated &&
-                this.tRex.blinkCount < Runner.config.MAX_BLINK_COUNT)) {
+            if (this.playing || (!this.activated && this.tRex.blinkCount < Runner.config.MAX_BLINK_COUNT)) {
                 this.tRex.update(deltaTime);
                 this.scheduleNextUpdate();
             }
@@ -776,6 +776,7 @@
             this.stop();
             this.crashed = true;
             this.distanceMeter.acheivement = false;
+
 
             this.tRex.update(100, Trex.status.CRASHED);
 
@@ -1936,6 +1937,7 @@
             }
 
             this.maxScore = parseInt(maxDistanceStr);
+            
         },
 
         /**
@@ -1945,6 +1947,7 @@
         calcXPos: function (canvasWidth) {
             this.x = canvasWidth - (DistanceMeter.dimensions.DEST_WIDTH *
                 (this.maxScoreUnits + 1));
+                
         },
 
         /**
@@ -1978,8 +1981,7 @@
 
             if (opt_highScore) {
                 // Left of the current score.
-                var highScoreX = this.x - (this.maxScoreUnits * 2) *
-                    DistanceMeter.dimensions.WIDTH;
+                var highScoreX = this.x - (this.maxScoreUnits * 2) * DistanceMeter.dimensions.WIDTH;
                 this.canvasCtx.translate(highScoreX, this.y);
             } else {
                 this.canvasCtx.translate(this.x, this.y);
