@@ -70,7 +70,11 @@ html, body {
   width: 100vw;
   height: 100vh;
   font-family: Space;
-  font-size: 1rem;
+  font-size: 1.05rem;
+}
+a{
+  text-decoration: none;
+  color: black;
 }
 .main-wrapper{
   padding: 24px;
@@ -86,7 +90,7 @@ html, body {
   z-index: 10;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.13);
-  position:relative;  
+  position: absolute;  
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .animation{
@@ -125,7 +129,8 @@ html, body {
 .offline .interstitial-wrapper {
   color: #2b2b2b;
   margin: 0 auto;
-  top: 30%;
+  position: relative;
+  /* top: 30%; */
   /* max-height: 170px; */
   /* max-width: 70%; */
   border: 1px solid;
@@ -135,8 +140,8 @@ html, body {
 .offline .runner-container {
   height: 150px;
   overflow: hidden;
-  position: absolute;
-  top: 14%;
+  position: relative;
+  /* top: 14%; */
   width: 44px;
 }
 
@@ -165,11 +170,23 @@ html, body {
 }
 
 .random-image-wrapper{
-  margin: 42px 0;
+  margin: 48px 0 12px;
 }
 
 .random-image-wrapper img{
   width: 100%;
+}
+
+.hidden{
+  visibility: none;
+}
+.data{
+  font-family: Everett medium;
+}
+.home{
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 48px;
 }
 
 

@@ -1,7 +1,3 @@
-// $(document).ready(function() {
-//     animateDiv();
-
-// });
 $('#main-frame-error').on('click', function(){
     animateDiv();
     $('#a').addClass('animation')

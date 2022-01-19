@@ -1152,6 +1152,9 @@
                         // $('#a').removeClass('animation')
                         console.log('crash')
                         imgRandom();
+                        setTimeout(function(){
+                            $('.hidden-content').removeClass('hidden')
+                        }, 200)
 
 
                         return [adjTrexBox, adjObstacleBox];
@@ -2730,11 +2733,24 @@ var imgArray = ['1.jpeg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpeg', '6.jpeg', '7.j
 var basePath= "assets/crashes/";
 var imgWrapper = $('.random-image-wrapper');
 
+
 function imgRandom() {
     // for (var i = 0; i < 1; i++) {
+        var noDuplicates = $('.random-image-wrapper > img');
+
+        if (noDuplicates.length > 0) {
+            console.log('already there')
+            noDuplicates.remove();
+        }
         var rand = imgArray[Math.floor(Math.random() * imgArray.length)];
         var image = new Image();
         image.src = basePath+rand;
         imgWrapper.append(image);
+        
+        noDuplicates.addClass('modal-img')
     // }
 }
+
+$(document).ready(function() {
+    imgRandom();
+});
