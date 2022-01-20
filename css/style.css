@@ -192,6 +192,9 @@ a{
 
 
 /* HOME */
+.title{
+  margin-top: 24px;
+}
 .blackOut{
   font-size: 40px;
 }
@@ -200,27 +203,46 @@ a{
   width: 80%;
   border: 1px solid;
   background-color: white;
-  top: 20%;
+  top: 15%;
   padding: 12px;
 }
 .close{
   margin: 0 2%;
   font-size: 1.3rem;
 }
-
-
-
 .circle{
   width: 100%;
 }
-.dot{
-  width: 4%;
+.question{
+  margin: 60px 0;
 }
-.pic{
-  width: 80%;
+.dot{
+  width: 5%;
+  margin-right: 12px;
+}
+.answers{
+  margin-bottom: 48px;
+}
+.pip{
+  max-height: 0vh;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+.ext{
+  max-height: 300vh;
 }
 .crash-pic{
   font-family: Everett reg;
+  margin: 15% 0;
+}
+.pic{
+  width: 60%;
+  margin-right: 12px;
+}
+
+.dataset{
+  margin-top: 48px;
 }
 .guy{
   width: 10%;

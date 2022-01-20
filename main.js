@@ -47,4 +47,31 @@ function calcSpeed(prev, next) {
     return speed;
 }
 
+// HOME
+$('.trinkkultur span').on('click', function(){
+    $('.tk-explanation').toggleClass('hidden')
+})
+$('.close').on('click', function(){
+    $('.tk-explanation').addClass('hidden')
+})
+$('.no').click(function(){
+    $('#pippone').addClass('ext')
+    // var scrollEl = document.getElementById("pippone");
+    // scrollEl.scrollIntoView()
+    setTimeout(function(){
+        scrollToTarget()
+    }, 300)
+})
 
+function scrollToTarget() {
+    var scrollEl = document.getElementById('pippone');
+    var elementPosition = scrollEl.getBoundingClientRect().top;
+    var offsetPosition = elementPosition + window.pageYOffset;
+    console.log('EL pos:' + elementPosition)
+    console.log('offsePos:' + offsetPosition)
+  
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+    });   
+}
