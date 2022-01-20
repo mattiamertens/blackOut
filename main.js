@@ -3,9 +3,10 @@ $('#main-frame-error').on('click', function(){
     $('#a').addClass('animation')
     console.log('Clicked on main frame')
     var bounceBall = setInterval(function () {
-        const result = Math.floor(Math.random() * 7) + 1
-        document.getElementById("a").style.backdropFilter = "blur(" + result + "px)";    
-    }, 1000);
+        const result = Math.floor(Math.random() * 7) + 1;
+        document.getElementById("a").style.backdropFilter = "blur(" + result + "px)";  
+        // document.getElementById("a").style.transform = "scale(" + result/4 + ")";
+    }, 800);
 })
 
 
