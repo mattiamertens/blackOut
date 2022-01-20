@@ -75,3 +75,6 @@ function scrollToTarget() {
         behavior: "smooth"
     });   
 }
+$('.reveal').click(function(){
+    $(this).siblings().children().removeClass('blur')
+})
