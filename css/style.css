@@ -63,6 +63,12 @@
 .column{
   flex-direction: column;
 }
+.underlined{
+  text-decoration: underline;
+}
+.evrtt{
+  font-family: Everett medium;
+}
 
 html, body {
   padding: 0;
@@ -121,10 +127,6 @@ a{
   position: relative;
 }
 
-.hidden {
-  display: none;
-}
-
 /* Offline page */
 .offline .interstitial-wrapper {
   color: #2b2b2b;
@@ -176,9 +178,8 @@ a{
 .random-image-wrapper img{
   width: 100%;
 }
-
 .hidden{
-  visibility: none;
+  visibility: hidden;
 }
 .data{
   font-family: Everett medium;
@@ -190,10 +191,40 @@ a{
 }
 
 
+/* HOME */
+.blackOut{
+  font-size: 40px;
+}
+.tk-explanation{
+  position: absolute;
+  width: 80%;
+  border: 1px solid;
+  background-color: white;
+  top: 20%;
+  padding: 12px;
+}
+.close{
+  margin: 0 2%;
+  font-size: 1.3rem;
+}
 
 
 
-
+.circle{
+  width: 100%;
+}
+.dot{
+  width: 4%;
+}
+.pic{
+  width: 80%;
+}
+.crash-pic{
+  font-family: Everett reg;
+}
+.guy{
+  width: 10%;
+}
 
 
 
